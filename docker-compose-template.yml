@@ -1,0 +1,18 @@
+web:
+  #build: .
+  image: siutoba/docker-guarani
+  ports:
+   - "3000:80"
+  links:
+   - pg
+  environment:
+   TOBA_ID_DESARROLLADOR: <ID DESARROLLADOR>
+  volumes:
+   - <PATH A GESTION>:/var/local/gestion
+
+pg:
+  image: postgres:9.4
+  environment:
+    POSTGRES_USER: postgres
+    POSTGRES_PASSWORD: postgres
+
