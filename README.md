@@ -20,6 +20,10 @@ sudo docker-compose up -d
 Alternativamente se puede correr manualmente sin la necesidad de docker-compose:
 
 ```
+sudo docker run --name pg_data -v /var/lib/postgresql/data postgres:9.4 true
+```
+
+```
 sudo docker run -i -t --name pg -e POSTGRES_PASSWORD=postgres -e POSTGRES_USER=postgres postgres:9.4
 ```
 
