@@ -10,6 +10,12 @@ web:
   volumes:
    - <PATH A GESTION>:/var/local/gestion
 
+pgdata:
+  image: postgres:9.4
+  command: true
+  volumes:
+   - /var/lib/postgresql/data
+
 pg:
   image: postgres:9.4
   environment:
