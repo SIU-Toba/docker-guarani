@@ -24,7 +24,7 @@ sudo docker run -i -t --name pg -e POSTGRES_PASSWORD=postgres -e POSTGRES_USER=p
 ```
 
 ```
-sudo docker run -i -t --name web -e TOBA_ID_DESARROLLADOR=<ID> -p "3000:80" --link pg -v <PATH A GESTION>:/var/local/gestion siutoba/docker-guarani
+sudo docker run -i -t --name web -e TOBA_ID_DESARROLLADOR=<ID> -p "3000:80" --link pg:pg -v <PATH A GESTION>:/var/local/gestion siutoba/docker-guarani
 ```
 
 Una vez que están corriendo los contenedores se podrá acceder a la aplicación a través de la url: [http://localhost:3000/toba_editor/2.6](http://localhost:3000/toba_editor/2.6)
