@@ -7,13 +7,17 @@ Se debe tener instalado [Docker](https://docs.docker.com/installation/) y [docke
 ## Uso
 Para utilizar estos contenedores se debe clonar este proyecto y crear el archivo *docker-compose.yml* partiendo del archivo
 template *docker-compose-template*.
+```
+cp docker-compose-template.yml docker-compose.yml
+#Editar parametros en docker-compose.yml
+```
 Una vez creado y completado el archivo se debe ejecutar lo siguiente:
 
 ```
 sudo docker-compose up -d
 ```
 
-También se puede correr manualmente sin la necesidad de docker-compose:
+Alternativamente se puede correr manualmente sin la necesidad de docker-compose:
 
 ```
 sudo docker run -i -t --name pg -e POSTGRES_PASSWORD=postgres -e POSTGRES_USER=postgres postgres:9.4
@@ -23,7 +27,7 @@ sudo docker run -i -t --name pg -e POSTGRES_PASSWORD=postgres -e POSTGRES_USER=p
 sudo docker run -i -t --name web -e TOBA_ID_DESARROLLADOR=<ID> -p "3000:80" --link pg -v <PATH A GESTION>:/var/local/gestion siutoba/docker-guarani
 ```
 
-Una vez que están corriendo los contenedores se podrá acceder a la aplicación a través de la url: http://localhost:3000/toba_editor/2.6.
+Una vez que están corriendo los contenedores se podrá acceder a la aplicación a través de la url: [http://localhost:3000/toba_editor/2.6](http://localhost:3000/toba_editor/2.6)
 Si se está usando Windows o Mac OS X la url no será localhost sino la ip de Boot2Docker.
 
 ## Desarrollo
