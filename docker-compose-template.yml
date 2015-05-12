@@ -21,4 +21,6 @@ pg:
   environment:
     POSTGRES_USER: postgres
     POSTGRES_PASSWORD: postgres
+  volumes_from:
+   - pgdata
 
