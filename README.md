@@ -23,6 +23,8 @@ sudo docker-compose up
 
 También se puede agregar el flag **-d** al comando anterior para que se corra como daemon (no lockea la terminal desde la que se corrió el comando)
 
+### Inicialización manual
+
 Alternativamente se puede correr manualmente sin la necesidad de docker-compose ejecutando los siguientes comandos:
 
 ```
@@ -36,6 +38,8 @@ sudo docker run -i -t --name pg -e POSTGRES_PASSWORD=postgres -e POSTGRES_USER=p
 ```
 sudo docker run -i -t --name web -e TOBA_ID_DESARROLLADOR=<ID> -p "3000:80" --link pg:pg -v <PATH A GESTION>:/var/local/gestion siutoba/docker-guarani
 ```
+
+### Accediendo a los sistemas
 
 Una vez que están corriendo los contenedores se podrá acceder a las aplicaciones a través de las url:
  
