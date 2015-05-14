@@ -14,8 +14,8 @@ HOME_GESTION=/var/local/gestion
 if [ -z "$(ls -A "$HOME_GESTION/lib/toba/instalacion")" ]; then
     echo -n postgres > /tmp/clave_pg;
     echo -n ${TOBA_PASS} > /tmp/clave_toba;
-    printf "\n" | ${HOME_GESTION}/lib/toba/bin/instalar -d ${TOBA_ID_DESARROLLADOR} -t 0 -h pg -p 5432 -u postgres -b toba_guarani -c /tmp/clave_pg -k /tmp/clave_toba;
-    ${HOME_GESTION}/lib/toba/bin/toba proyecto cargar -d ${HOME_GESTION} -p guarani -i desarrollo;
+    ${HOME_GESTION}/lib/toba/bin/instalar -d ${TOBA_ID_DESARROLLADOR} -t 0 -h pg -p 5432 -u postgres -b toba_guarani -c /tmp/clave_pg -k /tmp/clave_toba;
+    ${HOME_GESTION}/lib/toba/bin/toba proyecto cargar -d ${HOME_GESTION} -p guarani -i desarrollo -a 1;
     printf "\n" | ${HOME_GESTION}/bin/guarani instalar -j;
     echo 'chequea_sincro_svn = 1' >> ${HOME_GESTION}/lib/toba/instalacion/instalacion.ini;
 	echo "menu = 2" > ${HOME_GESTION}/menu.ini;
