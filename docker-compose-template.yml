@@ -10,6 +10,7 @@ web:
    TOBA_PASS: <PASS DEL USUARIO TOBA>
   volumes:
    - <PATH A GESTION>:/var/local/gestion
+   - <PATH A AUTO GESTION>:/var/local/autogestion
 
 pgdata:
   image: postgres:9.4

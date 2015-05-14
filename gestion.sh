@@ -9,6 +9,8 @@ if [ -z "$TOBA_PASS" ]; then
     TOBA_PASS=toba;
 fi
 
+echo "date.timezone=America/Argentina/Buenos_Aires" > php.ini;
+
 HOME_GESTION=/var/local/gestion
 
 if [ -z "$(ls -A "$HOME_GESTION/lib/toba/instalacion")" ]; then
@@ -22,6 +24,5 @@ if [ -z "$(ls -A "$HOME_GESTION/lib/toba/instalacion")" ]; then
 	chown -R www-data ${HOME_GESTION}/lib/toba/instalacion/i__desarrollo;
 fi
 
-echo "date.timezone=America/Argentina/Buenos_Aires" > php.ini;
 ln -s ${HOME_GESTION}/lib/toba/instalacion/toba.conf /etc/apache2/sites-enabled/toba_guarani.conf;
 ln -s ${HOME_GESTION}/lib/toba/instalacion/toba.conf /etc/apache2/sites-available/toba_guarani.conf;

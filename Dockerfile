@@ -1,5 +1,10 @@
 FROM siutoba/docker-web
+MAINTAINER ablanco@siu.edu.ar
 
-COPY guarani.sh /entrypoint.d/
-RUN chmod +x /entrypoint.d/guarani.sh
+COPY gestion.sh /entrypoint.d/
+COPY autogestion.sh /entrypoint.d/
+RUN mkdir /var/local/autogestion_conf/
+COPY var/autogestion/* /var/local/autogestion_conf/
+
+RUN chmod +x /entrypoint.d/*.sh
 
