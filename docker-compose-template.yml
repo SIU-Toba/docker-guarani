@@ -5,12 +5,21 @@ web:
    - "3000:80"
   links:
    - pg
+   # Activar este link si se desea utilizar el servidor de Jasper
+#   - jasper
   environment:
    TOBA_ID_DESARROLLADOR: <ID DESARROLLADOR>
    TOBA_PASS: <PASS DEL USUARIO TOBA>
   volumes:
    - <PATH A GESTION>:/var/local/gestion
    - <PATH A AUTO GESTION>:/var/local/autogestion
+
+# Descomentar este bloque si se desea utilizar el servidor Jasper
+#jasper:
+##  build: jasper/
+#  image: siutoba/docker-guarani-jasper
+#  volumes:
+#   - <PATH A GESTION>:/var/local/gestion
 
 pgdata:
   image: postgres:9.4

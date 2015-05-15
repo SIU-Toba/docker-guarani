@@ -21,7 +21,13 @@ Una vez creado y completado el archivo se debe ejecutar lo siguiente:
 sudo docker-compose up 
 ```
 
-También se puede agregar el flag **-d** al comando anterior para que se corra como daemon (no lockea la terminal desde la que se corrió el comando)
+También se puede agregar el flag **-d** al comando anterior para que se corra como daemon (no lockea la terminal desde la que se corrió el comando).
+
+### Jasper
+
+Si se desea correr un servidor jasper se debe agregar el link **jasper** al contenedor web y descomentar el bloque que levanta
+el contenedor de jasper.
+Para más información ver el archivo **docker-compose-template.yml**.
 
 ### Inicialización manual
 
