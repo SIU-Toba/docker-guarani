@@ -18,6 +18,8 @@ web:
 #jasper:
 ##  build: jasper/
 #  image: siutoba/docker-guarani-jasper
+#  links:
+#   - pg
 #  volumes:
 #   - <PATH A GESTION>:/var/local/gestion
 
