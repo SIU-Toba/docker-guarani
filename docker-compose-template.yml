@@ -10,6 +10,8 @@ web:
   environment:
    TOBA_ID_DESARROLLADOR: <ID DESARROLLADOR>
    TOBA_PASS: <PASS DEL USUARIO TOBA>
+   # Descomentar esta variable de entorno para corregir permisos en OSX
+#   OSX: 1
   volumes:
    - <PATH A GESTION>:/var/local/gestion
    - <PATH A AUTO GESTION>:/var/local/autogestion
