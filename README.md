@@ -5,6 +5,24 @@ Contenedor Docker para crear entorno de desarrollo de Guaraní 3 con una BD con 
  * Se debe tener instalado [Docker](https://docs.docker.com/installation/) y [docker-compose](https://docs.docker.com/compose/install/).
  * Hay que tener working copys de los sistemas en la máquina HOST (Guaraní Gestión y Autogestión). Si pertenecen al SIU hay que bajarlos del repositorio SIU y si son de alguna institución desde su respectivo nodo en [Colab](https://colab.siu.edu.ar/trac/guarani3)
 
+```
+# Desde SIU
+# Checkout Gestión
+svn co https://repositorio.siu.edu.ar/svn/guarani/trunk/guarani_3 <PATH A GESTION>
+
+# Checkout Autogestión
+svn co https://repositorio.siu.edu.ar/svn/g3w2/trunk3 <PATH A AUTOGESTION>
+```
+
+```
+# Desde Colab
+# Checkout Gestión
+svn co https://colab.siu.edu.ar/svn/guarani3/nodos/<NODO INSTITUCION>/gestion/trunk/<VERSION> <PATH A GESTION>
+
+# Checkout Autogestión
+svn co https://colab.siu.edu.ar/svn/guarani3/nodos/<NODO INSTITUCION>/3w/trunk/<VERSION> <PATH A AUTOGESTION>
+```
+
 ## Inicialización
 
 Para utilizar estos contenedores se debe clonar este proyecto y crear el archivo **docker-compose.yml** partiendo del archivo
