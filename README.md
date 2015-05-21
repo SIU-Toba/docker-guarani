@@ -1,9 +1,9 @@
 # docker-guaraní
-Contenedor Docker para crear entorno de desarrollo de Guaraní.
+Contenedor Docker para crear entorno de desarrollo de Guaraní 3 con una BD con datos de prueba.
 
 ## Requerimientos
  * Se debe tener instalado [Docker](https://docs.docker.com/installation/) y [docker-compose](https://docs.docker.com/compose/install/).
- * Hay que tener working copys de los sistemas en la máquina HOST (Guaraní Gestión y Autogestión).
+ * Hay que tener working copys de los sistemas en la máquina HOST (Guaraní Gestión y Autogestión). Si pertenecen al SIU hay que bajarlos del repositorio SIU y si son de alguna institución desde su respectivo nodo en [Colab](https://colab.siu.edu.ar/trac/guarani3)
 
 ## Inicialización
 
