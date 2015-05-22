@@ -9,8 +9,6 @@ if [ -z "$TOBA_PASS" ]; then
     TOBA_PASS=toba;
 fi
 
-echo "date.timezone=America/Argentina/Buenos_Aires" > php.ini;
-
 HOME_GESTION=/var/local/gestion
 
 if [ -z "$(ls -A "$HOME_GESTION/lib/toba/instalacion")" ]; then
