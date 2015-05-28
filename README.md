@@ -52,3 +52,11 @@ Una vez que están corriendo los contenedores se podrá acceder a las aplicacion
  * [http://localhost:3000/autogestion](http://localhost:3000/autogestion)
 
 Si se está usando Windows o Mac OS X la url no será localhost sino la ip de Boot2Docker.
+
+### Recreando el ambiente
+
+Para recrear el ambiente hay que borrar la carpeta **<PATH A GESTION>/docker-data** y luego ejecutar:
+ 
+ ```
+ sudo docker-compose up 
+ ```

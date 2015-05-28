@@ -1,3 +1,10 @@
+data:
+  image: postgres:9.4
+  command: true
+  volumes:
+    - <PATH A GESTION>/docker-data/pgdata:/var/lib/postgresql/data
+    - <PATH A GESTION>/docker-data/instalacion:/var/local/gestion/docker-data/instalacion
+
 web:
   #build: .
   image: siutoba/docker-guarani
@@ -12,6 +19,8 @@ web:
    TOBA_PASS: <PASS DEL USUARIO TOBA>
    # Descomentar esta variable de entorno para corregir permisos en OSX
 #   OSX: 1
+  volumes_from:
+   - data
   volumes:
    - <PATH A GESTION>:/var/local/gestion
    - <PATH A AUTO GESTION>:/var/local/autogestion
@@ -25,17 +34,11 @@ web:
 #  volumes:
 #   - <PATH A GESTION>:/var/local/gestion
 
-pgdata:
-  image: postgres:9.4
-  command: true
-  volumes:
-   - /var/lib/postgresql/data
-
 pg:
   image: postgres:9.4
   environment:
     POSTGRES_USER: postgres
     POSTGRES_PASSWORD: postgres
   volumes_from:
-   - pgdata
+   - data
 
