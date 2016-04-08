@@ -17,6 +17,8 @@ web:
   environment:
    TOBA_ID_DESARROLLADOR: <ID DESARROLLADOR>
    TOBA_PASS: <PASS DEL USUARIO TOBA>
+   TOBA_NOMBRE_INSTALACION: <NOMBRE DESEADO PARA IDENTIFICAR ESTA INSTALACION>
+   DOCKER_NAME: <NOMBRE DEL CONTAINER>
    # Descomentar esta variable de entorno para corregir permisos en OSX
 #   OSX: 1
   volumes_from:
