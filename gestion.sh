@@ -30,8 +30,8 @@ if [ -z "$(ls -A "$TOBA_INSTALACION_DIR")" ]; then
     ${HOME_TOBA}/bin/instalar -d ${TOBA_ID_DESARROLLADOR} -n ${TOBA_NOMBRE_INSTALACION} -t 0 -h pg -p 5432 -u postgres -b toba_guarani -c /tmp/clave_pg -k /tmp/clave_toba;
     ${HOME_TOBA}/bin/toba proyecto cargar -d ${HOME_GESTION} -p guarani -i desarrollo -a 1;
 
-    # Instalar los juegos de dato de prueba
-    printf "\n" | ${HOME_GESTION}/bin/guarani instalar -j;
+    # Instalar los juegos de dato de prueba (Actualmente no se estan mantieniendo mas los datos de prueba)
+    #printf "\n" | ${HOME_GESTION}/bin/guarani instalar -j;
 
     # Específico de Guaraní
     echo 'chequea_sincro_svn = 1' >> ${TOBA_INSTALACION_DIR}/instalacion.ini;
