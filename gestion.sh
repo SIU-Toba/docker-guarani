@@ -31,7 +31,7 @@ if [ -z "$(ls -A "$TOBA_INSTALACION_DIR")" ]; then
     ${HOME_TOBA}/bin/toba proyecto cargar -d ${HOME_GESTION} -p guarani -i desarrollo -a 1;
 
     # Instalar los juegos de dato de prueba (Actualmente no se estan mantieniendo mas los datos de prueba)
-    #printf "\n" | ${HOME_GESTION}/bin/guarani instalar -j;
+    printf "\n" | ${HOME_GESTION}/bin/guarani instalar;
 
     # Específico de Guaraní
     echo 'chequea_sincro_svn = 1' >> ${TOBA_INSTALACION_DIR}/instalacion.ini;
