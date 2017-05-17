@@ -18,7 +18,7 @@ fi
 HOME_GESTION=/var/local/gestion
 HOME_TOBA=${HOME_GESTION}/lib/toba
 # se hace un export para que lo tome el toba al momento de la instalación
-export TOBA_INSTALACION_DIR=${HOME_GESTION}/docker-data/instalacion
+export TOBA_INSTALACION_DIR=${HOME_GESTION}/lib/toba/instalacion
 
 if [ -z "$(ls -A "$TOBA_INSTALACION_DIR")" ]; then
         if [ -z "$DOCKER_WAIT_FOR" ]; then
