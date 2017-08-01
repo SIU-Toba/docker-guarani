@@ -1,5 +1,7 @@
 #!/bin/bash
 
+echo "memory_limit = 256M" >> /usr/local/etc/php/php.ini
+
 if [ -z "$TOBA_ID_DESARROLLADOR" ]; then
     TOBA_ID_DESARROLLADOR=0;
 fi
